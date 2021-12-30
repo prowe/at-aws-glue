@@ -1,0 +1,8 @@
+version=0.1
+[default.global.parameters]
+profile = "sandbox-dev"
+stack_name = "prowe-glue-testing-sandbox"
+capabilities = [
+    "CAPABILITY_IAM"
+]
+

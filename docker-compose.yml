@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  glue_jupyter:
+    image: amazon/aws-glue-libs:glue_libs_3.0.0_image_01
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+    volumes:
+      - "~/.aws:/home/glue_user/.aws:ro"
+      - ".:/home/glue_user/workspace/jupyter_workspace"
+      - "./certs/my_key_store_key.key:/home/glue_user/.certs/my_key_store_key.key"
+      - "./certs/my_key_store.pem:/home/glue_user/.certs/my_key_store.pem"
+    command:
+      - "/home/glue_user/jupyter/jupyter_start.sh"
+    environment:
+      - 'DISABLE_SSL=true'
