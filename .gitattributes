@@ -1,0 +1,2 @@
+data/memberships/part-00000-84552a82-40ee-4e02-87fa-fe8d04138cbf-c000.snappy.parquet filter=lfs diff=lfs merge=lfs -text
+data/memberships/.part-00000-84552a82-40ee-4e02-87fa-fe8d04138cbf-c000.snappy.parquet.crc filter=lfs diff=lfs merge=lfs -text

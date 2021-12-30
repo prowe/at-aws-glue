@@ -8,4 +8,4 @@ inputDF = glueContext.create_dynamic_frame_from_options(
         "paths": ["s3://awsglue-datasets/examples/us-legislators/all/memberships.json"]
     },
     format = "json")
-inputDF.printSchema()
+inputDF.toDF().show()
